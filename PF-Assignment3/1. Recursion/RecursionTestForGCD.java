@@ -12,8 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class RecursionTestForGCD {
-		private int input1;
-		private int input2;
+    private int input1;
+    private int input2;
 		private int expectedResult;
 		private Recursion recursion;
 		
