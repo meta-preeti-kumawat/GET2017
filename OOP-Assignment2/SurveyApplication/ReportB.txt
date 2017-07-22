@@ -1,0 +1,10 @@
+Participant 1, 4, 3, Communication, good
+Participant 2, 5, 5, Delivery Process, fine
+Participant 3, 3, 3, Delivery Process, none
+Participant 4, 1, 1, Service Quality, need improvement in services
+Participant 5, 2, 2, Communication, not happy
+Participant 6, 3, 3, Delivery Process, hope it works next time
+Participant 7, 4, 4, Service Quality/Communication, good
+Participant 8, 1, 1, Service Quality/Delivery Process, not satisfied. improve 
+Participant 9, 5, 5, Delivery Process, good try
+Participant 10, 4, 4, Communication, nice
