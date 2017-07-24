@@ -1,0 +1,4 @@
+Q1. Rating for Services, Single Select, (1/2/3/4/5)
+Q2. Overall Rating, Single Select, (1/2/3/4/5)
+Q3. Area of improvement, Multi Select, (Service Quality/ Communication/ Delivery Process)
+Q4. Feedback, Text
