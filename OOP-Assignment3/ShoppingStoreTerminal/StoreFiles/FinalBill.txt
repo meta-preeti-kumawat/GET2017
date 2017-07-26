@@ -1,0 +1,9 @@
+
+ Final Bill :
+
+ Subtotal : Rs.1977.0
+ Product Level Discounts : Rs.271.85
+ Order Level Discounts : Rs.170.515
+ Total Discounts : Rs.442.365
+
+ Total Cost : Rs.1534.635
