@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site Design</title>
+	<link rel="icon" href="images/profile-icon.ico">
+	<style type="text/css">
+		body{
+			background: url("images/back-cover.jpg");
+		}
+		.container{
+			background: #ffffff;
+			margin: 20px;
+			border-radius: 10px;
+			min-height: 700px;
+		}
+		#header, #footer{
+			background: #e3ebff;
+			text-align: center;
+		}
+		#header{
+			padding: 10px; 
+			border-top-left-radius: 10px; 
+			border-top-right-radius: 10px;
+		}
+		#footer{
+			padding: 20px;
+			border-bottom-left-radius: 10px; 
+			border-bottom-right-radius: 10px;
+		}
+		#navbar{
+			background: #78cff4;
+		}
+		#navbar ul{
+			margin-top: 0px;
+			padding: 20px;
+			list-style-type: none;
+		}
+		#navbar ul li{
+			display: inline;
+			padding: 19px;
+			font-weight: bold;	
+			background: transparent;
+			border: solid 1px #78cff4;
+			transition: all 0.2s linear;
+		}
+		#navbar ul li:hover{
+			background: #e3ebed;
+			border: solid 1px #000000;
+		}
+		#content{
+			display: flex;
+		}
+		.section{
+			margin: 20px;
+		}
+		#left-bar{
+			width: 25%;
+		}
+		#right-bar{
+			width: 25%;
+		}
+		#middle-bar{
+			flex:1;
+		}
+		.block{
+			border-radius: 10px;
+			background-color: #fdfcf9;
+			padding: 10px;
+			margin-top: 10px;
+			border: solid 1px #fdfcff;
+		}
+		.block-head{
+			background: #e3efef;
+			padding: 10px;
+			border-radius: 10px;
+			font-weight: bold;
+			font-size: 1.5em;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		.block-body{
+			margin-top: 2px;
+			padding: 10px;
+			transition: all 0.25s linear;
+			/*display: none; */
+		}
+		.block:hover .block-body{
+			display: block;
+		}
+		a.as-block .block-body:hover{
+			background: #e3efef;
+		}
+		a{
+			text-decoration: none;
+		}
+		a.underline .block-body{
+			text-decoration: underline;
+			padding: 1px;
+			padding-left: 10px;
+		}
+		.main-heading{
+			font-size: 3em;
+		}
+		.starting-text{
+			font-size: 1.2em;
+		}
+		.image{
+			padding: 10px;
+		}
+		#copyright{
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+			<h1>Enter Site Title</h1>
+			<h3>Enter Site Slogan</h3>
+		</div>
+		<div id="navbar">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div class="section" id="left-bar">
+				<div class="block" id="block1">
+					<div class="block-head">Vertical Menu</div>
+					<a class="as-block" href=""><div class="block-body">New Page 1</div></a>
+					<a class="as-block" href=""><div class="block-body">New Page 2</div></a>
+				</div>
+				<div class="block" id="block2">
+					<div class="block-head">New Block</div>
+					<div class="block-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>	
+				</div>
+			</div>
+			<div class="section" id="middle-bar">
+				<h1 class="main-heading">New Page</h1>
+				<div class="starting-text">Enter Page Content here...</div>
+				<div class="image">
+					<img src="images/sample-image.jpg" width="100%">
+				</div>
+				<div class="main-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p></div>
+			</div>
+			<div class="section" id="right-bar">
+				<div class="block" id="block3">
+					<div class="block-head">Search</div>
+					<div class="block-body">
+						<form>
+							<input type="text" name="text-search"><br/><br/>
+							<input type="submit" name="search" value="Search">
+						</form>
+					</div>
+				</div>
+				<div class="block" id="block3">
+					<div class="block-head">Categories</div>
+					<div class="block-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+					<a class="underline" href=""><div class="block-body">All News</div></a>
+					<a class="underline" href=""><div class="block-body">Jokes</div></a>
+					<a class="underline" href=""><div class="block-body">Links</div></a>
+					<a class="underline" href=""><div class="block-body">Videos</div></a>
+				</div>
+				<div class="block" id="block4">
+					<div class="block-head">Archives</div>
+					<a class="underline" href=""><div class="block-body">July 2017</div></a>
+					<a class="underline" href=""><div class="block-body">June 2017</div></a>
+					<a class="underline" href=""><div class="block-body">May 2017</div></a>
+					<a class="underline" href=""><div class="block-body">April 2017</div></a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<a href="">Link 1</a> | 
+				<a href="">Link 2</a> | 
+				<a href="">Link 3</a>
+			</div>
+			<div id="copyright">Copyright &copy; 2017. All Rights Reserved.</div>
+		</div>
+	</div>
+</body>
+</html>
