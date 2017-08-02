@@ -1,0 +1,27 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background: #78cff4;
+    margin: 50px;
+    transition: 0.6s;
+    text-align: center;
+    padding-top: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#box1:hover{
+    background: #F7D08A;
+    transform: rotate(180deg);
+}
+#box2:hover{
+    background: #E3F09B;
+    transform: scale(2);
+}
+#box3:hover{
+    background: #4B3F72;
+    transform: skew(30deg, 0deg);
+}
+#box4:hover{
+    background: #FDCFF3;
+    transform: translate(100px, 100px);
+}
