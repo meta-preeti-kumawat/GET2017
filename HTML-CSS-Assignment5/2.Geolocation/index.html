@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geo Location</title>
+    <style type="text/css">
+        #mapHolder{ margin: 20px; }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <button onclick="getLocation()">Find me in Google Map</button>
+    <div id="mapHolder"></div>
+
+    <script type="text/javascript">
+        var result = document.getElementById('result');
+        function getLocation(){
+            if (navigator.geolocation) {
+                result.innerHTML = "Processing.....";
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            }
+            else{
+                place.innerHTML = "GeoLocation is not supported by this browser";
+            }
+
+            function showPosition(position){
+                var latitudeLongitude = position.coords.latitude + "," + position.coords.longitude;
+                var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+ latitudeLongitude + "&zoom=14&size=400x300";
+                document.getElementById('mapHolder').innerHTML = "<img src='"+img_url+"'>";
+                result.innerHTML = "Map Displayed :-)";
+                
+            }
+        }
+        function showError(error){
+            switch(error.code){
+                case error.PERMISSION_DENIED:
+                    result.innerHTML = "Permission is denied for Geo Location";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    result.innerHTML = "Location information is unavailable";
+                    break;
+                case error.TIMEOUT:
+                    result.innerHTML = "Request timed out";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    result.innerHTML = "An unknown error occured";
+                    break;
+                                    
+
+            }
+        }
+    </script>
+</body>
+</html>
