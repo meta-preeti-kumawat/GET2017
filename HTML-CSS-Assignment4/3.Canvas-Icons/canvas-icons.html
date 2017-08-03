@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+	<canvas id="myCanvas-circle" width="100" height="100">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas-semi-circle" width="100" height="100">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas-hollow-circle" width="100" height="100">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas-circle-with-plus" width="100" height="100">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas-triangle" width="100" height="100">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas-rectangle" width="100" height="100">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+	<script>
+		var c = document.getElementById("myCanvas-circle");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.fillStyle = "deepskyblue";
+		ctx.arc(50,50,40,0,2*Math.PI);
+		ctx.closePath();
+		ctx.fill();
+	</script> 
+
+
+	<script>
+		var c = document.getElementById("myCanvas-semi-circle");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.strokeStyle = " grey";
+		ctx.lineWidth = "5";
+		ctx.arc(50,50,40,0,2*Math.PI);
+		ctx.closePath();
+		ctx.stroke();
+
+		ctx.fillStyle = "deepskyblue";
+		ctx.beginPath();
+		ctx.arc(50,50,42.5,Math.PI/2,3*Math.PI/2);
+		ctx.closePath();
+		ctx.fill();
+	</script> 
+
+
+	<script>
+		var c = document.getElementById("myCanvas-hollow-circle");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.strokeStyle = " deeppink";
+		ctx.lineWidth = "10";
+		ctx.arc(50,50,38,0,2*Math.PI);
+		ctx.closePath();
+		ctx.stroke();
+	</script> 
+
+
+	<script>
+		var c = document.getElementById("myCanvas-circle-with-plus");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.fillStyle = "goldenrod";
+		ctx.arc(50,50,45,0,2*Math.PI);
+		ctx.closePath();
+		ctx.fill();
+		ctx.strokeStyle = "white";
+		ctx.lineWidth = "15";
+		ctx.moveTo(50,25);
+		ctx.lineTo(50,75);
+		ctx.stroke();
+
+		ctx.moveTo(25,50);
+		ctx.lineTo(75,50);
+		ctx.stroke();
+	</script> 
+
+
+	<script>
+		var c = document.getElementById("myCanvas-triangle");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "deeppink";
+		ctx.moveTo(50,10);
+		ctx.lineTo(10,90);
+		ctx.lineTo(90,90);
+		ctx.fill();
+	</script> 
+
+
+	<script>
+		var c = document.getElementById("myCanvas-rectangle");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "rgb(18, 130, 18)";
+		ctx.fillRect(10,10,80,80);
+	</script> 
+</body>
+</html>
