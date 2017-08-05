@@ -1,0 +1,5 @@
+#form-table {margin-left: 30%; }
+.panel{ position: relative; }
+.error{ color : red; position : absolute; left :110%; display : none; top : 0; white-space : nowrap; }
+.cityError{ color : red;}
+.nav a{ text-decoration: underline; cursor: pointer; }

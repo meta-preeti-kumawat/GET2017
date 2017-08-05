@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML 5 - Contact Us</title>
+    <link rel="icon" href="images/HTML5_Logo_512.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <table width="80%" align="center">
+        <tr>
+            <td><img src="images/HTML5_Logo_512.png" height="100px"></td>
+            <td align="right" class="nav">
+                <a onclick="window.location.replace('index.html')">Home</a>
+                <a >About</a>
+                <a >Product</a>
+                <a >Gallery</a>
+                <a >Contact</a>
+            </td>
+        </tr>
+    </table>
+    <hr width="90%" color="#e1e1e0" size="2px">
+    <table width="80%" align="center">
+        <tr>
+            <td><img src="images/contact-us.png" width="100%"></td>
+        </tr>
+    </table>
+    <br/><br/><br/><br/>
+    <form onSubmit="return formCheck();">
+        <table width="40%" id="form-table">
+            <tr>
+                <td><b>Name</b></td>
+                <td class="panel">
+                    <input type="text" name="name" id="name">
+                    <span class="error" id="name-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td class="panel">
+                    <input type="text" name="email" id="email">
+                    <span class="error" id="email-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><b>City</b></td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="">Select a city</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Udaipur">Udaipur</option>
+                        <option value="Ajmer">Ajmer</option>
+                        <option value="Alwar">Alwar</option>
+                        <option value="Jodhpur">Jodhpur</option>
+                        <option value="Kota">Kota</option>
+                        <option value="Bikaner">Bikaner</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="city-statement"></td>
+                <td id="city-value"></td>
+            </tr>
+            <tr>
+                <td><b>Organization Name</b></td>
+                <td class="panel">
+                    <input type="text" name="org-name" id="orgName">
+                    <span class="error" id="org-name-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Contact Number</b></td>
+                <td class="panel">
+                    <input type="text" name="number" id="number" />
+                    <span class="error" id="number-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Message</b></td>
+                <td class="panel">
+                    <textarea rows="3" cols="22" name="message" id="message"></textarea>
+                    <span class="error" id="message-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="Submit"></td>
+                <td></td>
+            </tr>
+        </table>
+        
+    </form>
+    <br/><br/><br/><br/>
+    <hr width="90%" color="#e1e1e0" size="2px">
+    <table align="center">
+        <tr>
+            <td>&copy; Copyright 2017-18 | All Rights Reserved | Metacube Training</td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
