@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dag and Drop</title>
+    <style type="text/css">
+        #rectangle{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: solid 1px #aaaaaa;
+        }
+    </style>
+    <script type="text/javascript">
+        function allowDrop(event){
+            event.preventDefault();
+        }
+        function drag(event){
+            event.dataTransfer.setData("text", event.target.id);
+        }
+        function drop(event){
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <p>Drag the Image into the rectangle</p>
+    <div id="rectangle" ondrop = "drop(event)" ondragover="allowDrop(event)"></div>
+    <br/>
+    <img id="drag-img" src="images/html5.png" draggable="true" ondragstart = "drag(event)" width="200">
+</body>
+</html>

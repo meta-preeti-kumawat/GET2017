@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage</title>
+    <script type="text/javascript">
+        function saveToLocalStorage(){
+            var text = document.getElementById('sample-text');
+            localStorage.setItem("sample-key", text.value);
+        }
+        function getLocalStorage(){
+            document.getElementById('display').innerHTML = localStorage.getItem("sample-key");
+        }
+    </script>
+</head>
+<body>
+    <p id="display">This is default text</p>
+    <input type="text" name="sample-text" id="sample-text">
+    <input type="button" name="save" value="Save value in local Storage" onclick="saveToLocalStorage()">
+    <br/>
+    <br/>
+    <input type="button" name="fetch" value="Get Local Storage" onclick="getLocalStorage()">
+</body>
+</html>
