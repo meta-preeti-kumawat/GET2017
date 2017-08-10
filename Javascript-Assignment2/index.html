@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Assignment 2</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="logo left">Javascript Assignment 2</div>
+        <div class="navbar right">
+            <ul class="mainMenu">
+                <li class="hasSubMenu"><a>Linked List</a>
+                    <ul class="subMenu">
+                        <li><a href="#singlyLinkedList"> Singly linked list </a></li>
+                        <li><a href="#doublyLinkedList"> Doubly linked list </a></li>
+                    </ul>
+                </li>
+                <li><a href="#repeatingString"> Repeating String </a></li>
+                <li><a href="#queue"> Queue </a></li>
+                <li><a href="#stack"> Stack </a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <section class="questions" id="singlyLinkedList">
+        <div class="container block-up-question">
+            <p>
+                 Question 1(a) : Write Singly linked list programme in javascript.
+            </p>
+        </div>
+        <div class="block-content">
+            <div class="container block-right">
+                <form>
+                    <div class="getInputs">
+                        <label for="dataSLL">Add new element in singly linked list</label>
+                        <input type="text" name="dataSLL" id="dataSLL" onfocus=" clearMessage('singlyLinkedList','onRemovePrintMessageSLL');"/>
+                        <input type="button" name="add" value="Add Element" onclick="addItemSLL();" />
+                    </div>
+                    <div class="getInputs">
+                        <label for="positionSLL">Remove element from singly linked list at position</label>
+                        <input type="number" name="positionSLL" id="positionSLL" onfocus=" clearMessage('singlyLinkedList','onRemovePrintMessageSLL');" />
+                        <div class="submit-block">
+                            <span class="warning"><img src="images/warning.png" height="25px;"></span>
+                            <span class="error" id="onRemovePrintMessageSLL"></span>
+                            <input type="button" name="remove" value="Remove Element" onclick="removeItemSLL();" />
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>    
+            <div class="result"><span class="left">Output</span><span class="clear"></span>
+                <div id="listSLL"></div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="questions alternate" id="doublyLinkedList">
+        <div class="container block-up-question">
+            <p> Question 1(b) : Write doubly linked list programme in javascript.</p>
+        </div>
+        <div class="block-content">
+            <div class="container block-right">
+                <form>
+                    <div class="getInputs">
+                        <label for="dataDLL">Add new element in doubly linked list</label>
+                        <input type="text" name="dataDLL" id="dataDLL" onfocus="clearMessage('doublyLinkedList','onRemovePrintMessageDLL');" />
+                        <input type="button" name="add" value="Add Element" onclick="addItemDLL();" />
+                    </div>
+                    <div class="getInputs">
+                        <label for="positionDLL">Remove element from doubly linked list at position</label>
+                        <input type="number" name="positionDLL" id="positionDLL" onfocus="clearMessage('doublyLinkedList','onRemovePrintMessageDLL');" />
+                        <div class="submit-block">
+                            <span class="warning"><img src="images/warning.png" height="25px;"></span>
+                            <span class="error" id="onRemovePrintMessageDLL"></span>
+                            <input type="button" name="remove" value="Remove Element" onclick="removeItemDLL();" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="result"><span class="left">Output</span><span class="clear"></span>
+                <div id="listDLL"></div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="questions" id="repeatingString">
+        <div class="container block-up-question">
+            <p>
+                Question 2 : Write a program in javascript input a string and remove the consecutive repeating string from that like below :
+                <br/>If input is eeabcddcbfgf then
+                <br/>eeabcddcbfgf->abcddcbfgf->abccbfgf->abbfgf->afgf
+            </p>
+        </div>
+        <div class="block-content">
+            <div class="container block-right">
+                <form>
+                    <div class="getInputs">
+                        <label for="inputString">Enter string in which consecutives are to be removed </label>
+                        <input type="text" name="inputString" id="inputString" onfocus="clearMessage('repeatingString', 'error');" required/>
+                        <div class="submit-block">    
+                            <span class="warning"><img src="images/warning.png" height="25px;"></span>
+                            <span class="error" id="error"></span>
+                            <input type="button" name="submit" value="Remove Consecutives" onclick="removeConsecutiveRepeatingString();">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="result"><span class="left">Output</span><span class="clear"></span>
+                <div id="outputString"></div>
+            </div>    
+        </div>
+    </section>    
+
+    <section class="questions alternate" id="queue">
+        <div class="container block-up-question">
+            <p>  Question 3 : Write complete queue implementation in JS. Make a JS queue class and add enqueue and dequeue function in its prototype.</p>
+        </div>
+        <div class="block-content">
+            <div class="container block-right">
+                <form>
+                    <div class="getInputs">
+                        <label for="dataQ">Insert new element in Queue</label>
+                        <input type="text" name="dataQ" id="dataQ" onfocus="clearMessage('queue','onDeQueuePrintMessage')"/>
+                        <input type="button" name="add" value="Enqueue Element" onclick="enQueueItem();" />
+                    </div>
+                    <div class="getInputs submit-block">
+                        <input type="button" name="remove" value="Dequeue Element" onclick="deQueueItem();" />
+                        <span class="warning"><img src="images/warning.png" height="25px;"></span>
+                        <span class="error" id="onDeQueuePrintMessage"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="result"><span class="left">Output</span><span class="clear"></span>
+                <div id="displayQueue"></div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="questions" id="stack">
+        <div class="container block-up-question">
+            <p>Question 4 : Write complete stack implementation in JS. Make a JS stack class and add push and pop function in its prototype. </p>
+        </div>
+        <div class="block-content">
+            <div class="container block-right">
+                <form>
+                    <div class="getInputs">
+                        <label for="dataStack">Push new element in Stack</label>
+                        <input type="text" name="dataStack" id="dataStack" onfocus="clearMessage('stack' ,'onPopPrintMessage')"/>
+                        <input type="button" name="push" value="Push Element" onclick="pushItem();" />
+                    </div>
+                    <div class="getInputs submit-block">
+                        <input type="button" name="pop" value="Pop Element" onclick="popItem();" />
+                        <span class="warning"><img src="images/warning.png" height="25px;"></span>
+                        <span class="error" id="onPopPrintMessage"></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="result"><span class="left">Output</span><span class="clear"></span><br/>
+                <div id="displayStack"></div>
+            </div>    
+        </div>
+    </section>    
+    
+     <script type="text/javascript" src="js/singly-linked-list.js"></script>
+     <script type="text/javascript" src="js/doubly-linked-list.js"></script>
+     <script type="text/javascript" src="js/repeating-string.js"></script>
+     <script type="text/javascript" src="js/queue.js"></script>
+     <script type="text/javascript" src="js/stack.js"></script>
+</body>
+</html>
