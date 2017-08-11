@@ -1,0 +1,4 @@
+#form-table {margin-left: 30%; }
+.panel{ position: relative; }
+.error{ color : #bb6f6f; position : absolute; left :110%; display : none; top : 0; white-space : nowrap; padding-top: 15px; }
+.cityError{ color : #bb6f6f;}

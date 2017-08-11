@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Assignment 3</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-question2.css">
+</head>
+<body>
+	<div class="container">
+		<div class="questions" id="question1">
+	 		<div class="quesText">
+	 			<div class="quesNumber">Question 1: </div>
+	 			<div class="quesStatement"> Write a sum method which will work properly when invoked by either syntax as below:
+					<br/>sum(2,3); output is 5
+					<br/>sum(2)(3); output is 5 	
+				</div>
+	 		</div>
+	 		<div class="solution">
+	 			<div class="half-width">
+	 				<form>
+		 				<div>
+		 					<input type="number" class="input" name="number1" id="number1" placeholder="Enter Number 2" required/>
+		 				</div>
+						
+		 				<div>
+		 					<input type="number" class="input" name="number2" id="number2" placeholder="Enter Number 2" required/>
+		 				</div>
+						
+						<div>
+							<input type="button" name="add" class="btn-input" value="Add(x,y)" onclick="performAddWithTwoParameters()">
+							<input type="button" name="add" class="btn-input" value="Add(x)(y)" onclick="performAddWithOneParameter()">
+						</div>
+						<div class="output">
+							Output on Add(x,y): <span id="addWithTwoParameters"></span>
+							<br/>Output on Add(x)(y): <span id="addWithOneParameter"></span>
+						</div> 
+					</form>
+	 			</div>
+	 			
+	 		</div>
+	 	</div>
+	 	<div class="questions" id="question2">
+	 		<div class="quesText">
+	 			<div class="quesNumber">Question 2: </div>
+	 			<div class="quesStatement"> In the HTML 5 assignment(contact.html page assignment no.1) on click of submit button every user value should be saved to localstorage and when user refreshes the page then these values should be populated in the corresponding fields. There should be one button also to clear the localstorage value and now if user refreshes the page than it should be blank form.
+
+				</div>
+	 		</div>
+	 		<div class="solution">
+	 			<div class="half-width">
+	 				<form onSubmit="return formCheck();">
+				        <table width="40%" id="form-table">
+				            <tr>
+				                <td><b>Name</b></td>
+				                <td class="panel">
+				                    <input type="text" name="name" id="name" class="input">
+				                    <span class="error" id="name-error"></span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><b>Email</b></td>
+				                <td class="panel">
+				                    <input type="text" name="email" id="email" class="input">
+				                    <span class="error" id="email-error"></span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><b>City</b></td>
+				                <td>
+				                    <select name="city" id="city" class="input">
+				                        <option value="">Select a city</option>
+				                        <option value="Jaipur">Jaipur</option>
+				                        <option value="Udaipur">Udaipur</option>
+				                        <option value="Ajmer">Ajmer</option>
+				                        <option value="Alwar">Alwar</option>
+				                        <option value="Jodhpur">Jodhpur</option>
+				                        <option value="Kota">Kota</option>
+				                        <option value="Bikaner">Bikaner</option>
+				                    </select>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td id="city-statement"></td>
+				                <td id="city-value"></td>
+				            </tr>
+				            <tr>
+				                <td><b>Organization Name</b></td>
+				                <td class="panel">
+				                    <input type="text" class="input" name="org-name" id="orgName">
+				                    <span class="error" id="org-name-error"></span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><b>Contact Number</b></td>
+				                <td class="panel">
+				                    <input type="text" class="input" name="number" id="number" />
+				                    <span class="error" id="number-error"></span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><b>Message</b></td>
+				                <td class="panel">
+				                    <textarea rows="3" cols="22" class="input" name="message" id="message"></textarea>
+				                    <span class="error" id="message-error"></span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td>&nbsp;</td>
+				                <td>&nbsp;</td>
+				            </tr>
+				            <tr>
+				                <td><input type="submit" class="btn-input" name="submit" value="Submit"></td>
+				                <td><input type="reset" class="btn-input" name="clear" value="Clear Local Storage" onclick="clearLocalStorage()"></td>
+				            </tr>
+				        </table>
+				        
+				    </form>
+				   
+				    
+	 			</div>
+	 			
+	 		</div>
+	 
+	 	</div>
+	 	<div class="questions" id="question3">
+	 		<div class="quesText">
+	 			<div class="quesNumber">Question 3: </div>
+	 			<div class="quesStatement">  Write a web worker which will do looping for 2 minute and after its completion it will pass the current timestamp to the main thread and update the label on the ui with this time stamp.
+				</div>
+	 		</div>
+	 		<div class="solution">
+	 			<div class="half-width">
+	 				<div class="browser-error"> Only Works in Mozilla Firefox...</div>
+ 					<div>Timer: <span id="minutes">0</span>:<span id="seconds">00</span></div>
+					<button class="btn-input" id="start" onclick="startWorker()">Start Worker</button>
+					<br/>
+					<div>Start Time: <span id="startTime"></span></div> 
+					<div>Resultant Time: <span id="endTime"></span></div>
+				
+	 			</div>
+	 			
+	 		</div>
+	 	</div>
+	 	<div class="questions" id="question4">
+	 		<div class="quesText">
+	 			<div class="quesNumber">Question 4: </div>
+	 			<div class="quesStatement"> Implement the searching and deleting also on single link list programme of previous assignment.
+				</div>
+	 		</div>
+	 		<div class="solution">
+	 			<div class="half-width">
+	 				<form>
+				        <div class="getInputs">
+				            <label for="data" class="padding-top-20">Add new element in singly linked list</label>
+				            <input type="text" class="input" name="data" id="data" />
+				            <input type="button" class="btn-input" name="add" value="Add" onclick="addItem('data');" />
+				        </div>
+				        <div class="getInputs panel">
+				            <label for="position" class="padding-top-20">Remove element at position</label>
+				            <input type="number" class="input" name="position" id="position" onfocus="clearMessage('onRemovePrintMessage');" />
+				            <input type="button" class="btn-input" name="remove" value="Remove" onclick="removeItem('position');" />
+				            <span class="error padding-top-20" id="onRemovePrintMessage"></span>
+				        </div>
+				        <div class="getInputs panel">
+				            <label for="searchPosition" class="padding-top-20">Search element by position</label>
+				            <input type="number" class="input" name="searchPosition" id="searchPosition" onfocus="clearMessage('onSearchPositionPrintMessage');" />
+				            <input type="button" class="btn-input" name="search" value="Search" onclick="searchItemByPosition('searchPosition', 'onSearchPositionPrintMessage');" />
+				            <span class="error padding-top-20" id="onSearchPositionPrintMessage"></span>
+				        </div>
+				        <div class="getInputs panel" class="padding-top-20">
+				            <label for="position">Search element by data</label>
+				            <input type="text" class="input" name="searchElement" id="searchElement" onfocus="clearMessage('onSearchElementPrintMessage');" />
+				            <input type="button" class="btn-input" name="search" value="Search" onclick="searchItemByValue('searchElement','onSearchElementPrintMessage');" />
+				            <span class="error padding-top-20" id="onSearchElementPrintMessage"></span>
+				        </div>
+
+				        <div style="margin-top: 40px;">List: 
+				            <div id="list"></div>
+				        </div>
+				    </form>
+	 			</div>
+	 		</div>
+	 	</div>
+
+	</div>
+
+	<!-- include scripts -->
+	<script type="text/javascript" src="js/sum.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/local-storage.js"></script>
+	<script type="text/javascript" src="js/workerUtils.js"></script>
+	<script type="text/javascript" src="js/workers.js"></script>
+    <script type="text/javascript" src="js/singly-linked-list.js"></script>
+    <script type="text/javascript" src="js/form-validations.js"></script>
+</body>
+</html>
