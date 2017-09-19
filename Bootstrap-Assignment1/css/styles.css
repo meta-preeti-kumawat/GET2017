@@ -1,0 +1,41 @@
+html, body { height: 100%;}
+.wrapper{ min-height: 100%; position: relative;}
+header, footer { background: #b85454; color: #fff;}
+header .container { padding: 15px 40px 15px 15px; }
+header .container .user-profile { background: #f0677c; padding: 10px; }
+header .navbar-header .navbar-toggle { background: #f0677c; border-color: #333; cursor: pointer;}
+header .navbar-header .icon-bar{ background: #fff;}
+nav.navbar { border-radius: 0px; min-height: 0px; border:none;}
+nav.navbar ul.navbar-nav li{ text-transform: uppercase;}
+nav.navbar-inverse ul.navbar-nav li.active a{ background-color: #b85454;}
+section.main-content { padding-bottom: 50px; }
+section.main-content .container > .row { margin-top: 15px; }
+section.main-content .container > .row.information { margin-top: 30px; }
+section.main-content .container .row .col-sm-12 .section-heading { color: #F0676E; padding-bottom: 15px;
+ border-bottom: solid 1px #F0676E; }
+section.main-content .container .services .col-sm-3 .content{ color: #fff; background-color: #333; padding: 15px; 
+ border-radius: 5px; margin-top: 15px;}
+section.main-content .container .services #notifications .content { background-color: #b9b739; }
+section.main-content .container .services #photogallery .content { background-color: #f94c4c; }
+section.main-content .container .services #favourites .content { background-color: #119c7e; }
+section.main-content .container .services #announcements .content { background-color: #b739b9; }
+section.main-content .container .services .col-sm-3 .content .icon { margin-bottom: 20px; }
+section.main-content .container .services .col-sm-3 .content .icon .glyphicon { padding: 15px; border: solid 1px #fff; border-radius: 50%; }
+section.main-content .container .services .col-sm-3 .content .service-text { padding: 15px; font-size: 1.2em; border-top: solid 1px #fff; }
+
+section.main-content .container .panel { margin-bottom: 15px; }
+section.main-content .container .panel .panel-body .message .glyphicon { padding: 5px; border: solid 1px #e6dddd; margin-right: 5px;}
+
+section.main-content .container .social { padding: 10px; color:#fff; border-radius:0px; margin-top: 1%;}
+section.main-content .container .social .fa{ padding-right: 8px; }
+section.main-content .container #facebook { background-color: #6279a7; }
+section.main-content .container #google-plus { background-color: #cf573a; }
+section.main-content .container #twitter { background-color: #33bbeb; }
+section.main-content .container #linkedin { background-color: #3e90b4; }
+
+section.main-content .container .message-panel  button{ margin-top: 1%;}
+
+.horizontal-line { height: 1px; background: #ddd; margin: 3% 0px;}
+.radius-none { border-radius: 0px; }
+.extra-space { height: 50px; }
+footer.footer { position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; padding-top: 10px;}
