@@ -1,0 +1,14 @@
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 text-center" *ngFor="let product of products" [class.selected]="product === selectedProduct"
+        (click)="onSelect(product)">
+            <div class="product-block">
+                {{product.name}}
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">  
+        <product-detail [product]="selectedProduct"></product-detail>
+    </div>
+</div>
