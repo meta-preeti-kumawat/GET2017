@@ -1,0 +1,14 @@
+<div class="row product-detail" *ngIf="product">
+    <div class="col-sm-4">
+      <img src="{{product.image}}" class="img-responsive img-thumbnail" style="height:300px; margin:auto;" > 
+  </div>
+  <div class="col-sm-8">
+      <h2 class="product-name">{{product.name}}</h2>
+    <div class="row"><label class="col-sm-2 text-right">Name: </label><div class="col-sm-8 text-left">{{product.name}}</div></div>
+    <div class="row"><label class="col-sm-2 text-right">Price: </label><div class="col-sm-8 text-left">Rs. {{product.price}}</div></div>
+    <div class="row"><label class="col-sm-2 text-right">Description: </label><div class="col-sm-8 text-left">{{product.description}}</div></div>
+    <br/><div class="text-center"><button (click)="goBack()" class="btn btn-primary">Back</button></div>
+  </div>
+</div>
+
+   

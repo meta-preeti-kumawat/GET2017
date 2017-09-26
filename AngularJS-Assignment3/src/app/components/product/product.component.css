@@ -1,0 +1,24 @@
+
+.product-block{
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #f4f8f9;
+}
+.col-sm-4{
+  padding: 15px;
+}
+.panel-heading{
+  font-weight: bold;
+}
+.panel-footer{
+  position: relative;
+}
+.product-price{
+  position: absolute;
+  left: 4%;
+  color: brown;
+  font-weight: bold;
+}

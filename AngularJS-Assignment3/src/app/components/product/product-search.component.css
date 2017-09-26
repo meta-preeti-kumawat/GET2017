@@ -1,0 +1,21 @@
+.search-component{
+    position: relative;
+}
+.list-search-result{
+    position: absolute;
+    top: 100%;
+    z-index:10;
+}
+.search-result{
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width:195px;
+ 
+  background-color: white;
+  cursor: pointer;
+} 
+.search-result div:hover{
+  color: #eee;
+  background-color: #607D8B;
+}
