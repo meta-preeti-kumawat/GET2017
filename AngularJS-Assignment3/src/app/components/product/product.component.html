@@ -1,0 +1,26 @@
+<h2 class="text-center">Products</h2>
+<hr>
+<div class="text-right" style="margin-right: 15px;">
+    <button class="btn btn-xs btn-primary" routerLink="/addProduct"><span class="glyphicon glyphicon-plus"></span></button>
+</div>
+<div class="col-sm-4"  *ngFor="let product of products" [class.selected]="product === selectedProduct"
+(click)="onSelect(product)" > 
+    <div class="panel panel-primary">
+        <div class="panel-heading"  [routerLink]="['/detail', product.id]">{{product.name}}</div>
+        <div class="panel-body text-center" [routerLink]="['/detail', product.id]">
+            <img src="{{product.image}}" class="img-responsive" style="height:150px; margin:auto;" > 
+        </div>
+        <div class="panel-footer text-right">
+            <div class="product-price">Rs. {{product.price}}</div>
+            <button class="btn btn-xs btn-info" [routerLink]="['/detail', product.id]">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </button>
+            <button class="btn btn-xs btn-success" [routerLink]="['/edit', product.id]">
+                <span class="glyphicon glyphicon-edit"></span>
+            </button>
+            <button class="btn btn-xs btn-danger" (click) = "remove(product)">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h2 class="text-center">Top Products</h2>
+<hr>
+<div class="grid grid-pad">
+  <div *ngFor="let product of products" class="col-sm-3" >
+    <div class="panel panel-primary">
+            <div class="panel-heading" [routerLink]="['/detail', product.id]">{{product.name}}</div>
+            <div class="panel-body" [routerLink]="['/detail', product.id]">Price: Rs. {{product.price}}</div>
+    </div>
+  </div>
+</div>
